@@ -1,0 +1,28 @@
+references:
+	https://www.themeum.com/install-wordpress-localhost/
+	https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html
+	http://help.semplice.com/customer/en/portal/articles/2629857-guide-installing-semplice-in-wordpress
+
+
+download:
+	MAMP
+	Wordpress
+	Semplice
+
+install:
+	MAMP
+
+create:
+	php database on MAMP
+		configure access credentials
+
+move:
+	wordpress into MAMP/htdocs
+		in plugins:
+			download Simply Static
+				configure
+	
+upload:
+	semplice_studio.zip
+		Settings > Activate One-Click Updates to enter your license key.
+		
