@@ -1,0 +1,93 @@
+:root {
+    --primary-font: 'Merriweather', serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --link-color: #1c37e3;
+    --text-color: #1c37e3;
+}
+
+body {
+    margin: 0;
+    font-size: 16px; 
+    line-height: 1.6em;
+    font-family: var(--primary-font); /* Using Merriweather as the main font */
+    color: var(--text-color);
+}
+
+/* Basic CSS Reset/Normalization */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+[visually-hidden] { 
+    display: none;
+}
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+/* Typography and Links */
+p {
+    margin: 1em 0;
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    color: #ff2600;
+    text-decoration: underline;
+}
+b, strong {
+    font-weight: bold;
+}
+
+/* Images and Media */
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+}
+
+
+/* LAYOUT & GRID STYLES */
+#pageWrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    padding: 40px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px; 
+    margin-right: -16px;
+}
+
+.col-6 {
+    flex: 0 0 40%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
