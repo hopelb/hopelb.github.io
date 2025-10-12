@@ -78,7 +78,12 @@ figure {
     flex: 0 0 40%;
     padding-left: 16px;
     padding-right: 16px;
+    padding-bottom: 16px;
     box-sizing: border-box;
+}
+
+.hero-image {
+    padding-top: 16px;
 }
 
 @media (max-width: 768px) {
