@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+    <title>Hope Lumsden-Barry</title>
+
+</head>
+<body>
+
+<!-- Top Nav -->
+<div id="top-nav">
+    <span id="title">HOPE LUMSDEN-BARRY</span>
+    <span id="current_page"></span>
+
+<!-- Oval Menu Button -->
+    <button class="trigger-button" popovertarget="main-menu">MENU</button>
+
+    <div id="main-menu" popover>
+        <button id="active-btn" class="menu-button-active" popovertarget="main-menu" popovertargetaction="hide">
+            MENU
+        </button>
+
+        <nav class="menu-content">
+            <div class="menu-section">
+                <div class="menu-header">PROJECTS <span id="arrow">↑</span></div>
+                <ul class="submenu">
+                    <li><a href="#zines">ZINES</a></li>
+                    <li><a href="#websites">WEBSITES</a></li>
+                    <li><a href="#brands">BRANDS</a></li>
+                    <li><a href="#exhibitions">EXHIBITIONS</a></li>
+                    <li><a href="#titles">TITLES</a></li>
+                </ul>
+            <a href="/updates" class="menu-header">SITE UPDATES</a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Main content -->
+<main id="content-wrapper">
+    <!-- SR only because the home page has no current page in that span -->
+    <h1 class="sr-only">Home page</h1>
+    <div class="row">
+        <div class="column">
+            <p>Hey! I'm Hope Lumsden-Barry. I'm a freelance designer living and working in Naarm/Melbourne. 
+                I make books, zines, websites, brands, exhibitions, and more recently, titles for independent films. You can find an incomplete selection of my work on this site.</p> 
+            
+            <p>I'm also a sessional lecturer at RMIT University. Formerly, I was Experience Design Principal at Paper Giant. 
+                A long time ago, I worked at Today. I run a small press called Picolitre Press.</p>
+            
+            <p>⌘Z→ This website is currently under construction. 
+                Stay tuned for something nicer later in the year.</p>
+            
+            <p>◎ Email → <a href="mailto:hopelumsdenbarry@gmail.com">hopelumsdenbarry@gmail.com</a></p>
+            <p>◎ Instagram → <a href="https://www.instagram.com/hope.lumsden.barry/?hl=en">@hope.lumsden.barry</a></p>   
+        </div>
+        <div class="column" >
+            <img src="https://hopelumsdenbarry.com/HolidayPostWebUpdate.webp" alt="">
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<div id="footer">
+    <div class="column">
+    <p>I acknowledge the people of the Kulin Nation as the traditional custodians of the lands on which I live and work. </p>
+    <p>It is currently, approximately, <span id="current-season"></span>.</p>
+    <p>I pay my respects to Elders past, present, and future. <br>And, I recognise that sovereignty was never ceded.</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>
