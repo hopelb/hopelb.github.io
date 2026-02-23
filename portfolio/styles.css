@@ -31,29 +31,32 @@ body {
 #top-nav {
     position: fixed;
     width: 100%;
-    display: grid; /* changed from flex when adding current page */
-    /* justify-content: space-between; */
+    display: grid; 
     grid-template-columns: 1fr auto 1fr; /* Left, Center, Right */
     align-items: center;
-    padding: 40px 40px; 
+    padding: 40px 5vw; 
     box-sizing: border-box;
     z-index: 1000;
     top: 0;
     left: 0;
     background-color: #f0f0f0;
-    min-height: 100px;
-    min-width: 460px;
+    height: 120px;
+    min-height: 120px;
+    min-width: 375px;
     font-family: Arial, sans-serif;
+}
+#top-nav a{
+font-size: 18px;
+text-decoration: none;
+color: #000;
 }
 #top-nav::after {
     content: "";
     position: absolute;
     bottom: 0;      /* Stick to the bottom of the nav bar */
-    
     /* This creates the white space at the edges */
     left: 5vw;
     right: 5vw;
-    
     height: 1px;    /* The thickness of the line */
     background-color: #000;
 }
@@ -71,10 +74,16 @@ body {
     margin-left: 5px;
 }
 
-
 #title {
     font-size: 18px;
 }
+
+h1 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;    
+}
+
 #footer {
     position: relative;
     padding-top: 2vw; /* adjust value to control whitespace */
@@ -122,7 +131,6 @@ body {
 }
 
 .trigger-button {
-    z-index: 100;
     justify-self: end;
 }
 
@@ -130,21 +138,21 @@ body {
     background-color: #F5D327;
     position: absolute;
     /* Match top-nav padding */
-    top: 19px; 
-    right: 19px;
+    top: 19px;
+    right: calc(2vw - 1px);
 }
 
 /* 2. The Popover Box */
 #main-menu {
     inset: auto;
-    width: 360px;
+    width: 380px;
     background-color: #fff;
     border: 1px solid #000;
     margin: 0;
-    padding: 40px 40px 40px 40px;
+    padding: 20px 2.5vw 20px 30px;
     overflow: visible;
     top: 20px;
-    right: 20px;
+    right: 3vw;
     min-height: 100px;
 }
 
@@ -231,7 +239,7 @@ body {
 }
 
 /* Adjustments for Mobile Screens */
-@media (max-width: 480px) {
+@media (max-width: 375px) {
 
 #main-menu {
     /* Menu takes up most of the screen width on mobile */
@@ -242,7 +250,6 @@ body {
     inset: 5px 0 auto 0;
     margin: auto;
     position: fixed;
-
     border: 1px solid #000;
     box-sizing: border-box;
 }
@@ -253,11 +260,10 @@ body {
 }
 
 .menu-button-active {
-
     position: fixed;
     box-sizing: border-box;
-    top: 40px;    /* Matches #top-nav padding-top */
-    right: 40px;  /* Matches #top-nav padding-right */
+    top: 41px;    /* Matches #top-nav padding-top */
+    right: 5vw;  /* Matches #top-nav padding-right */
 }
 
 .menu-header {
