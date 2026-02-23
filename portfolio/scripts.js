@@ -1,5 +1,5 @@
 // Fetch and inject navigation
-fetch('/nav.html')
+fetch('./nav.html')
 .then(response => response.text())
 .then(html => {
     document.getElementById('nav-container').innerHTML = html;
@@ -27,7 +27,7 @@ fetch('/nav.html')
 
 
 // Fetch and inject navigation
-fetch('/footer.html')
+fetch('./footer.html')
 .then(response => response.text())
 .then(html => {
     document.getElementById('footer-container').innerHTML = html;
