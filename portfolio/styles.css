@@ -1,6 +1,6 @@
 :root {
     /* Define the menu height in one central place */
-    --nav-height: 100px; 
+    --nav-height: 130px; 
 }
 
 .sr-only {
@@ -19,6 +19,14 @@ body {
     padding-top: calc(var(--nav-height) - 5vw);
 }
 
+main {     
+    line-height: 1.5;
+}
+
+footer {
+    line-height: 1.5;
+}
+
 .merriweather-testing {
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
@@ -34,7 +42,7 @@ body {
     display: grid; 
     grid-template-columns: 1fr auto 1fr; /* Left, Center, Right */
     align-items: center;
-    padding: 40px 5vw; 
+    padding: 25px 5vw; 
     box-sizing: border-box;
     z-index: 1000;
     top: 0;
@@ -45,11 +53,12 @@ body {
     min-width: 375px;
     font-family: Arial, sans-serif;
 }
-#top-nav a{
-font-size: 18px;
-text-decoration: none;
-color: #000;
+#title a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
 }
+
 #top-nav::after {
     content: "";
     position: absolute;
@@ -133,6 +142,9 @@ h1 {
 .trigger-button {
     justify-self: end;
 }
+.trigger-button:hover {
+  background-color: #F5D327;
+}
 
 .menu-button-active {
     background-color: #F5D327;
@@ -164,14 +176,14 @@ h1 {
 .menu-content {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
 }
 
 .menu-content a:hover{
     text-decoration: underline; /* Adds an underline */
 }
 .menu-header {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     color: #000;
     text-decoration: none;
@@ -179,7 +191,7 @@ h1 {
 
 .submenu {
     list-style: none;
-    padding: 25px 0 25px 0;
+    padding: 25px 0 0px 0;
     margin: 0 0 0 35px;
     display: flex;
     flex-direction: column;
@@ -192,7 +204,7 @@ h1 {
     font-size: 22px;
     text-transform: uppercase;
 }
-
+ 
 #content-wrapper {
     /* 1. Push content below the fixed nav */
     margin-top: 40px; 
@@ -210,7 +222,6 @@ h1 {
     min-width: 300px; /* Stacks when the screen gets narrow */
     float: left;
     width: 50%;
-    padding: 10px;
 }
 
 /* If you want to add a shade to alt columns */
@@ -238,8 +249,27 @@ h1 {
     object-fit: cover;
 }
 
+.column.copy p {
+    max-width: 450px;
+}
+
+.column.left {
+    padding: 10px 10px 10px 0;
+}
+
+.column.right {
+    padding: 10px 0 10px 10px
+}
+
+
+
 /* Adjustments for Mobile Screens */
-@media (max-width: 375px) {
+@media (max-width: 402px) {
+
+#title {
+    /* allow title to break earlier to allow space for*/
+    max-width: 90px;
+}
 
 #main-menu {
     /* Menu takes up most of the screen width on mobile */
@@ -252,6 +282,7 @@ h1 {
     position: fixed;
     border: 1px solid #000;
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 .trigger-button, .menu-button-active {
@@ -262,17 +293,17 @@ h1 {
 .menu-button-active {
     position: fixed;
     box-sizing: border-box;
-    top: 41px;    /* Matches #top-nav padding-top */
+    top: 40px;    /* Matches #top-nav padding-top */
     right: 5vw;  /* Matches #top-nav padding-right */
 }
 
-.menu-header {
+/* .menu-header {
     font-size: 22px;
 }
 
 .submenu a {
     font-size: 18px;
-}
+} */
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -280,4 +311,44 @@ h1 {
   .column {
     width: 100%;
   }
+  
+  .column.left {
+    padding: inherit
+}
+
+  .column.right {
+    padding: inherit
+}
+}
+
+summary.menu-header {
+    cursor: pointer;
+    list-style: none; /* Remove default disclosure triangle */
+}
+
+summary.menu-header::marker {
+    display: none;
+}
+
+#arrow::before {
+    content: "↓"; /* Down arrow when closed */
+}
+
+details[open] #arrow::before {
+    content: "↑"; /* Up arrow when expanded */
+}
+.update {
+padding: 10px;
+}
+
+.update.line::after {
+    content: "";
+    position: absolute;
+    bottom: auto;
+    /* This creates the white space at the edges */
+    left: 5vw;
+    /* right: 65vw; */
+    min-width: 300px;
+    height: 1px;    /* The thickness of the line */
+    background-color: #000;
 }

@@ -51,7 +51,7 @@ fetch('footer.html')
                 const seasons = [
                     { name: "Biderap, dry season",           start: 1202, end: 1231 }, // Dec part
                     { name: "Biderap, dry season",           start: 101,  end: 201 },  // Jan part
-                    { name: "Luk, eel season",               start: 202,  end: 401 },
+                    { name: "Iuk, eel season",               start: 202,  end: 401 },
                     { name: "Waring, wombat season",         start: 402,  end: 601 },
                     { name: "Gannawarra, black swan season", start: 602,  end: 725 },
                     { name: "Guling, orchid season",         start: 726,  end: 925 },
