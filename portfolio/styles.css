@@ -25,6 +25,10 @@ main {
 
 footer {
     line-height: 1.5;
+    position: relative;
+    padding-top: 5px; /* adjust value to control whitespace */
+    flex: 1;         /* Both columns take equal space */
+    min-width: 300px; /* Stacks when the screen gets narrow */
 }
 
 .merriweather-testing {
@@ -54,9 +58,10 @@ footer {
     font-family: Arial, sans-serif;
 }
 #title a{
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     color: #000;
+    padding-right: 20px;
 }
 
 #top-nav::after {
@@ -83,21 +88,10 @@ footer {
     margin-left: 5px;
 }
 
-#title {
-    font-size: 18px;
-}
-
 h1 {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;    
-}
-
-#footer {
-    position: relative;
-    padding-top: 2vw; /* adjust value to control whitespace */
-    flex: 1;         /* Both columns take equal space */
-    min-width: 300px; /* Stacks when the screen gets narrow */
 }
 
 #footer::before {
@@ -128,6 +122,7 @@ h1 {
 
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     
     /* 50% radius on a non-square box creates the curve */
     border-radius: 50%; 
@@ -189,13 +184,17 @@ h1 {
     text-decoration: none;
 }
 
+.menu-header:hover {
+    text-decoration: underline;
+}
+
 .submenu {
     list-style: none;
     padding: 25px 0 0px 0;
     margin: 0 0 0 35px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .submenu a {
@@ -207,7 +206,7 @@ h1 {
  
 #content-wrapper {
     /* 1. Push content below the fixed nav */
-    margin-top: 40px; 
+    margin-top: 10px; 
     
     /* 2. Standard layout behavior */
     display: block;
@@ -224,10 +223,10 @@ h1 {
     width: 50%;
 }
 
-/* If you want to add a shade to alt columns */
-.alternate-col {
-    background-color:#bbb
+.column.copy p {
+    margin-top: 0;
 }
+
 
 /* Responsive column sections */
 * {
@@ -254,21 +253,21 @@ h1 {
 }
 
 .column.left {
-    padding: 10px 10px 10px 0;
+    padding: 5px 10px 5px 0;
 }
 
 .column.right {
-    padding: 10px 0 10px 10px
+    padding: 5px 0 5px 10px
 }
 
 
 
 /* Adjustments for Mobile Screens */
-@media (max-width: 402px) {
+@media (max-width: 460px) {
 
 #title {
     /* allow title to break earlier to allow space for*/
-    max-width: 90px;
+    max-width: 80px;
 }
 
 #main-menu {
@@ -351,4 +350,20 @@ padding: 10px;
     min-width: 300px;
     height: 1px;    /* The thickness of the line */
     background-color: #000;
+}
+
+.submenu a:focus-visible {
+    outline: none;  /* Remove default focus box */
+    text-decoration: underline;
+}
+
+.menu-header:focus-visible {
+    outline: none;
+    text-decoration: underline;
+}
+
+.trigger-button:focus-visible,
+.menu-button-active:focus-visible {
+    outline: 3px solid #0a6bcd;
+    outline-offset: 2px;
 }
